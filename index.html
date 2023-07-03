@@ -2,13 +2,40 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Focus Timer 2.0</title>
 </head>
 
 <body>
 
+  <div class="container">
+    <div class="timer">
+      <div class="timer-stopwatch">
+        <span>25</span>
+        <span>:</span>
+        <span>00</span>
+      </div>
+      <div class="timer_controls">
+        <button class="timer-button button-play">play</button>
+        <button class="timer-button button-stop">stop</button>
+        <button class="timer-button button-increase">increase</button>
+        <button class="timer-button button-decrement">decrement</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="controls-button button-piano">piano</button>
+      <button class="controls-button button-rain">rain</button>
+      <button class="controls-button button-ocean">ocean</button>
+      <button class="controls-button button-fire">fire</button>
+    </div>
+  </div>
+
+  <script type="module" src="./assets/js/scripts.js"></script>
 </body>
 
 </html>
