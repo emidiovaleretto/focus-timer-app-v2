@@ -21,6 +21,38 @@ body {
   background: #fff;
 }
 
+.toggle-switch {
+  position: absolute;
+  display: inline-block;
+  width: 4.8rem;
+  height: 2.4rem;
+
+  top: 1.6rem;
+  right: 3.2rem;
+
+  border-radius: 1.2rem;
+  background-color: #e1e1e6;
+}
+
+.toggle-switch-circle {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+
+  width: 1.6rem;
+  height: 1.6rem;
+
+  border-radius: 50%;
+  background-color: #f1eb9c;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+  transition: transform 0.2s ease 0s;
+}
+
+.toggle-switch-circle:hover {
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   gap: 20rem;
