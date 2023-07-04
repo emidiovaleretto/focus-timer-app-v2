@@ -8,7 +8,7 @@ let { minutesOnDisplay, secondsOnDisplay, countdown } = Elements()
 
 const timer = Timer({ minutesOnDisplay, secondsOnDisplay, countdown })
 
-const start = playSound()
+const audio = playSound()
 
 export function Events({
   play,
@@ -46,18 +46,42 @@ export function Events({
   }
 
   piano.onclick = () => {
-    start.playPianoBackground()
+    piano.classList.toggle("active")
+
+    if (!piano.classList.contains("active")) {
+      audio.piano.pause()
+    } else {
+      audio.piano.play()
+    }
   }
 
   rain.onclick = () => {
-    start.playRainBackground()
+    rain.classList.toggle("active")
+
+    if (!rain.classList.contains("active")) {
+      audio.rain.pause()
+    } else {
+      audio.rain.play()
+    }
   }
 
   waves.onclick = () => {
-    start.playWavesBackground()
+    waves.classList.toggle("active")
+
+    if (!waves.classList.contains("active")) {
+      audio.waves.pause()
+    } else {
+      audio.waves.play()
+    }
   }
 
   fire.onclick = () => {
-    start.playFireBackground()
+    fire.classList.toggle("active")
+
+    if (!fire.classList.contains("active")) {
+      audio.fire.pause()
+    } else {
+      audio.fire.play()
+    }
   }
 }
