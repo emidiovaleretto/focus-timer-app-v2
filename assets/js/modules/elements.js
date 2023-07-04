@@ -9,6 +9,8 @@ export function Elements() {
   const waves = document.querySelector(".button-ocean")
   const fire = document.querySelector(".button-fire")
 
+  const toggleSwitch = document.querySelector(".toggle-switch-circle")
+
   let minutesOnDisplay = document.querySelector(".minutes")
   let secondsOnDisplay = document.querySelector(".seconds")
 
@@ -23,6 +25,7 @@ export function Elements() {
     rain,
     waves,
     fire,
+    toggleSwitch,
     minutesOnDisplay,
     secondsOnDisplay,
     countdown,

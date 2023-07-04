@@ -4,6 +4,8 @@ import { Timer } from "./timer.js"
 
 import { playSound } from "./sounds.js"
 
+const body = document.querySelector("body")
+
 let { minutesOnDisplay, secondsOnDisplay, countdown } = Elements()
 
 const timer = Timer({ minutesOnDisplay, secondsOnDisplay, countdown })
@@ -19,6 +21,7 @@ export function Events({
   rain,
   waves,
   fire,
+  toggleSwitch,
 }) {
   play.onclick = () => {
     if (!play.classList.contains("button-pause")) {
@@ -82,6 +85,18 @@ export function Events({
       audio.fire.pause()
     } else {
       audio.fire.play()
+    }
+  }
+
+  toggleSwitch.onclick = () => {
+    toggleSwitch.classList.toggle("toggle-switch-active")
+
+    if (!toggleSwitch.classList.contains("toggle-switch-active")) {
+      body.classList.remove("dark-mode")
+      body.classList.add("light-mode")
+    } else {
+      body.classList.add("dark-mode")
+      body.classList.remove("light-mode")
     }
   }
 }

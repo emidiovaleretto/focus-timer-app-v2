@@ -29,8 +29,6 @@ export function Timer({ minutesOnDisplay, secondsOnDisplay, countdown }) {
       minutes = getMinutes()
       seconds = Number(secondsOnDisplay.innerHTML)
 
-      console.log(minutes)
-
       if (minutes === 0 && seconds === 0) {
         resetTimerDisplay()
         Button.stop()
