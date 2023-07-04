@@ -18,6 +18,20 @@ function updateTimerDisplay() {
   secondsOnDisplay.innerHTML = String(seconds).padStart(2, "0")
 }
 
+function increaseTime() {
+  if (minutes >= 59) return
+
+  minutes = Number(minutes) + 5
+  updateTimerDisplay()
+}
+
+function decreaseTime() {
+  if (minutes <= 0) return
+
+  minutes = Number(minutes) - 5
+  updateTimerDisplay()
+}
+
 buttonPlay.onclick = () => {
   countdown = setInterval(() => {
     if (minutes === 0 && seconds === 0) {
@@ -43,4 +57,22 @@ buttonStop.onclick = () => {
   buttonPlay.classList.remove("button-pause")
   buttonPlay.classList.add("button-play")
   clearInterval(countdown)
+}
+
+buttonIncrease.onclick = () => {
+  increaseTime()
+
+  if (minutes >= 60) {
+    buttonIncrease.disabled = true
+    // TODO: add a class to the button to change its color
+  }
+}
+
+buttonDecrease.onclick = () => {
+  decreaseTime()
+
+  if (minutes <= 5) {
+    buttonDecrease.disabled = true
+    // TODO: add a class to the button to change its color
+  }
 }

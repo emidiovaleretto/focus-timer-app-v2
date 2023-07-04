@@ -63,6 +63,10 @@ body {
   background: url("../img/play.svg") no-repeat center;
 }
 
+.button-pause {
+  background: url("../img/pause.svg") no-repeat center;
+}
+
 .button-stop {
   background: url("../img/stop.svg") no-repeat center;
 }
