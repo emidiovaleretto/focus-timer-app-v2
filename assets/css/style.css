@@ -188,6 +188,11 @@ body {
     brightness(100%) contrast(100%);
 }
 
+.dark-mode .feedback {
+  background-color: #e1e1e6;
+  color: #000000;
+}
+
 .feedback {
   position: fixed;
   bottom: 3rem;
@@ -204,11 +209,6 @@ body {
   border-radius: 6rem;
   border: none;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-.dark-mode .feedback {
-  background-color: #e1e1e6;
-  color: #000000;
 }
 
 .feedback:hover {
@@ -229,32 +229,169 @@ body {
   display: inline;
 }
 
+.feedback-form {
+  position: absolute;
+  bottom: 8rem;
+  right: 3.6rem;
+  max-width: 100%;
+  height: 48rem;
+  background-color: #323238;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 1.2rem;
+  animation: fade-in 0.4s ease 0s;
+}
+
+.feedback-form-heading {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    rgba(48, 48, 48, 1) 0%,
+    rgba(38, 38, 38, 1) 70%
+  );
+  border-radius: 0.6rem 0.6rem 0 0;
+  padding: 2.4rem;
+}
+
+.feedback-form-heading h3 {
+  position: relative;
+  font-weight: 500;
+  color: #e1e1e6;
+}
+
+.feedback-form-heading button {
+  border: none;
+  background: transparent;
+}
+
+.feedback-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.2rem 3.2rem;
+}
+
+.feedback-form form textarea {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  width: 100%;
+  height: 20rem;
+  padding: 1.6rem;
+  border-radius: 0.6rem;
+  background-color: #e1e1e6;
+  border: none;
+  resize: none;
+}
+
+.feedback-form form textarea:focus {
+  outline: 2px solid #02799d;
+}
+
+.feedback-form form input[type="submit"] {
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border-radius: 0.6rem;
+  background-color: #02799d;
+  border: none;
+  outline: 2px dashed transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease 0s;
+}
+
+@media (min-width: 768px) {
+  .feedback-form {
+    position: absolute;
+    bottom: 8rem;
+    right: 3.2rem;
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .feedback-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 1.2rem 3.2rem;
+  }
+
+  .feedback-form-heading button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+
+  .feedback-form form label {
+    font-weight: 500;
+    color: #e1e1e6;
+  }
+
+  .feedback-form form textarea {
+    height: 9rem;
+  }
+
+  .feedback-form form input[type="submit"] {
+    width: fit-content;
+  }
+
+  .feedback-form form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #025e7c;
+  }
+
+  .feedback-form form input[type="submit"]:focus {
+    outline: 2px dashed #5d98ab;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 50vw;
     flex-direction: column;
     gap: 4rem;
   }
+
   .timer-stopwatch {
     justify-content: center;
     font-size: 10rem;
   }
+
   img[src*="svg"] {
     width: 3.2rem;
     height: 3.2rem;
   }
+
   .timer_controls {
     gap: 2.8rem;
   }
+
   .controls {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .controls-button {
     width: 10rem;
     height: 10rem;
   }
+
   .button-play,
   .button-pause,
   .button-stop,
@@ -274,16 +411,20 @@ body {
     max-width: 90vw;
     gap: 2.4rem;
   }
+
   .timer-stopwatch {
     font-size: 8rem;
   }
+
   .timer_controls {
     gap: 1.6rem;
   }
+
   .controls {
     max-width: 70vw;
     margin-top: 2.4rem;
   }
+
   .controls-button {
     width: 8rem;
     height: 8rem;
