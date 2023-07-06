@@ -11,6 +11,7 @@ const {
   waves,
   fire,
   toggleSwitch,
+  feedbackButton,
 } = Elements()
 
 Events({
@@ -23,4 +24,5 @@ Events({
   waves,
   fire,
   toggleSwitch,
+  feedbackButton,
 })

@@ -1,6 +1,7 @@
 import { Elements } from "./elements.js"
 import { Button } from "./controls.js"
 import { Timer } from "./timer.js"
+import Modal from "./modal.js"
 
 import { playSound } from "./sounds.js"
 
@@ -22,6 +23,7 @@ export function Events({
   waves,
   fire,
   toggleSwitch,
+  feedbackButton,
 }) {
   play.onclick = () => {
     if (!play.classList.contains("button-pause")) {
@@ -98,5 +100,10 @@ export function Events({
       body.classList.add("dark-mode")
       body.classList.remove("light-mode")
     }
+  }
+
+  feedbackButton.onclick = (event) => {
+    event.preventDefault()
+    Modal.open()
   }
 }

@@ -10,6 +10,7 @@ export function Elements() {
   const fire = document.querySelector(".button-fire")
 
   const toggleSwitch = document.querySelector(".toggle-switch-circle")
+  const feedbackButton = document.querySelector(".feedback")
 
   let minutesOnDisplay = document.querySelector(".minutes")
   let secondsOnDisplay = document.querySelector(".seconds")
@@ -26,6 +27,7 @@ export function Elements() {
     waves,
     fire,
     toggleSwitch,
+    feedbackButton,
     minutesOnDisplay,
     secondsOnDisplay,
     countdown,
